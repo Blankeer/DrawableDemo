@@ -1,16 +1,14 @@
 # 自定义Drawable Demo(圆角/圆形图片，Material动画)
 ## RoundImageDrawable（圆角图片）
 参考：https://github.com/dinuscxj/LoadingDrawable
-
 1. bitmap图片的设置
-
- ```
+```
  mPaint = new Paint();
           BitmapShader bs = new BitmapShader(bitmap,
                   Shader.TileMode.CLAMP, Shader.TileMode.CLAMP);
           mPaint.setAntiAlias(true);
           mPaint.setShader(bs);
- ```
+```
 2. 绘制圆角
 
  ` canvas.drawRoundRect(mRectF, radius, radius, mPaint); `
@@ -21,13 +19,11 @@
 ## MaterialLoadDrawable
 模仿material design progerss动画.
 1. 将动画分为两个阶段。
-
 s代表当前弧度开始绘制角度，e代表当前弧度结束绘制角度，
 max表示角度的最大值，比如360*0.8,min则相反，比如5度,
 cs表示每圈开始绘制的角度
 - 第一个阶段：s=cs，e从cs->max+min+cs
 - 第二个阶段：e=max+min+cs，s从cs->max+cs
-
 上面是第0圈的主要流程，需要记录的是每次开始的起始角度cs,
 每圈结束后的s值即为下一圈的cs值。
 - 第0圈，cs=0;
