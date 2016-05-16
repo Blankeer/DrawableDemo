@@ -10,26 +10,24 @@
           mPaint.setShader(bs);
 ```
 2. 绘制圆角
-
  ` canvas.drawRoundRect(mRectF, radius, radius, mPaint); `
 ## CircleImageDrawable (圆形图片)
 绘制圆形
-
  ` canvas.drawCircle(radius, radius, radius, mPaint); `
 ## MaterialLoadDrawable
 模仿material design progerss动画.
-1. 将动画分为两个阶段。
+1. 将动画分为两个阶段
 s代表当前弧度开始绘制角度，e代表当前弧度结束绘制角度，
 max表示角度的最大值，比如360*0.8,min则相反，比如5度,
 cs表示每圈开始绘制的角度
-- 第一个阶段：s=cs，e从cs->max+min+cs
-- 第二个阶段：e=max+min+cs，s从cs->max+cs
+* 第一个阶段：s=cs，e从cs->max+min+cs
+* 第二个阶段：e=max+min+cs，s从cs->max+cs
 上面是第0圈的主要流程，需要记录的是每次开始的起始角度cs,
 每圈结束后的s值即为下一圈的cs值。
-- 第0圈，cs=0;
-- 第1圈，cs=max;
-- 第2圈，cs=(2*max)%360;
-- ...
+* 第0圈，cs=0;
+* 第1圈，cs=max;
+* 第2圈，cs=(2*max)%360;
+* ...
 
 2. 主要代码：
 ```
