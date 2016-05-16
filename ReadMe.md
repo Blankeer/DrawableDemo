@@ -1,6 +1,7 @@
 # 自定义Drawable Demo(圆角/圆形图片，Material动画)
 ## RoundImageDrawable（圆角图片）
 参考：https://github.com/dinuscxj/LoadingDrawable
+
 1. bitmap图片的设置
  ``` mPaint = new Paint();
           BitmapShader bs = new BitmapShader(bitmap,
@@ -9,8 +10,8 @@
           mPaint.setShader(bs);
  ```
 2. 绘制圆角
- ```        canvas.drawRoundRect(mRectF, radius, radius, mPaint);
- ```
+ `        canvas.drawRoundRect(mRectF, radius, radius, mPaint);
+ `
 ## CircleImageDrawable (圆形图片)
 绘制圆形
  `        canvas.drawCircle(radius, radius, radius, mPaint);
