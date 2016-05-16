@@ -2,9 +2,9 @@
 ## RoundImageDrawable（圆角图片）
 参考：https://github.com/dinuscxj/LoadingDrawable
 
-- bitmap图片的设置
+1. bitmap图片的设置
 
-```
+```java
  mPaint = new Paint();
           BitmapShader bs = new BitmapShader(bitmap,
                   Shader.TileMode.CLAMP, Shader.TileMode.CLAMP);
@@ -12,7 +12,7 @@
           mPaint.setShader(bs);
 ```
 
-- 绘制圆角
+1. 绘制圆角
 
  ` canvas.drawRoundRect(mRectF, radius, radius, mPaint); `
 
