@@ -4,7 +4,8 @@
 
 1. bitmap图片的设置
 
- ``` mPaint = new Paint();
+ ```
+ mPaint = new Paint();
           BitmapShader bs = new BitmapShader(bitmap,
                   Shader.TileMode.CLAMP, Shader.TileMode.CLAMP);
           mPaint.setAntiAlias(true);
@@ -12,11 +13,11 @@
  ```
 2. 绘制圆角
 
- `canvas.drawRoundRect(mRectF, radius, radius, mPaint);`
+ ` canvas.drawRoundRect(mRectF, radius, radius, mPaint); `
 ## CircleImageDrawable (圆形图片)
 绘制圆形
 
- `canvas.drawCircle(radius, radius, radius, mPaint);`
+ ` canvas.drawCircle(radius, radius, radius, mPaint); `
 ## MaterialLoadDrawable
 模仿material design progerss动画.
 1. 将动画分为两个阶段。
@@ -35,7 +36,8 @@ cs表示每圈开始绘制的角度
 - ...
 
 2. 主要代码：
-```  private void setup() {
+```
+ private void setup() {
           mColor = DEFAULT_COLOR;
           mWidth = mHeight = DEFAULT_SIZE;
           mInsetValue = DEFAULT_INSET;
