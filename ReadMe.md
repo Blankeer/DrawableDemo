@@ -31,7 +31,7 @@ cs表示每圈开始绘制的角度
 - ...
 
 2. 主要代码：
->  private void setup() {
+`  private void setup() {
           mColor = DEFAULT_COLOR;
           mWidth = mHeight = DEFAULT_SIZE;
           mInsetValue = DEFAULT_INSET;
@@ -107,3 +107,4 @@ cs表示每圈开始绘制的角度
           canvas.drawArc(rectf, mStartAngle, mEndAngle, false, mPaint);
           canvas.restoreToCount(canvasCopy);//恢复画布
       }
+`
