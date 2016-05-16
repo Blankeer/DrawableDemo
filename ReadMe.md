@@ -11,8 +11,7 @@
           mPaint.setAntiAlias(true);
           mPaint.setShader(bs);
 ```
-
-1. 绘制圆角
+2. 绘制圆角
 
  ` canvas.drawRoundRect(mRectF, radius, radius, mPaint); `
 
@@ -25,7 +24,7 @@
 
 模仿material design progerss动画.
 
-- 将动画分为两个阶段
+1. 将动画分为两个阶段
 
 s代表当前弧度开始绘制角度，e代表当前弧度结束绘制角度，
 max表示角度的最大值，比如360*0.8,min则相反，比如5度,
@@ -39,8 +38,7 @@ cs表示每圈开始绘制的角度
 * 第1圈，cs=max;
 * 第2圈，cs=(2*max)%360;
 * ...
-
-- 主要代码：
+2. 主要代码：
 
 ```java
  private void setup() {
