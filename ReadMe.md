@@ -1,11 +1,14 @@
 # 自定义Drawable Demo(圆角/圆形图片，Material动画)
+参考：https://github.com/dinuscxj/LoadingDrawable
+
+本项目地址：https://github.com/Blankeer/DrawableDemo
+
 效果图：
 
 ![gif](https://raw.githubusercontent.com/Blankeer/DrawableDemo/master/drawable.gif)
 
 蓝色的load是自定义的，红色的是系统的ProgressBar
 ## RoundImageDrawable（圆角图片）
-参考：https://github.com/dinuscxj/LoadingDrawable
 
 #### bitmap图片的设置
 
