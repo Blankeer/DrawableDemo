@@ -3,6 +3,7 @@
 参考：https://github.com/dinuscxj/LoadingDrawable
 
 1. bitmap图片的设置
+
  ``` mPaint = new Paint();
           BitmapShader bs = new BitmapShader(bitmap,
                   Shader.TileMode.CLAMP, Shader.TileMode.CLAMP);
@@ -10,12 +11,12 @@
           mPaint.setShader(bs);
  ```
 2. 绘制圆角
- `        canvas.drawRoundRect(mRectF, radius, radius, mPaint);
- `
+
+ `canvas.drawRoundRect(mRectF, radius, radius, mPaint);`
 ## CircleImageDrawable (圆形图片)
 绘制圆形
- `        canvas.drawCircle(radius, radius, radius, mPaint);
- `
+
+ `canvas.drawCircle(radius, radius, radius, mPaint);`
 ## MaterialLoadDrawable
 模仿material design progerss动画.
 1. 将动画分为两个阶段。
