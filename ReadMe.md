@@ -2,11 +2,12 @@
 ## RoundImageDrawable（圆角图片）
 参考：https://github.com/dinuscxj/LoadingDrawable
 1. bitmap图片的设置
-> mPaint = new Paint();
+ ``` mPaint = new Paint();
           BitmapShader bs = new BitmapShader(bitmap,
                   Shader.TileMode.CLAMP, Shader.TileMode.CLAMP);
           mPaint.setAntiAlias(true);
           mPaint.setShader(bs);
+ ```
 2. 绘制圆角
 >        canvas.drawRoundRect(mRectF, radius, radius, mPaint);
 ## CircleImageDrawable (圆形图片)
@@ -31,7 +32,7 @@ cs表示每圈开始绘制的角度
 - ...
 
 2. 主要代码：
-`  private void setup() {
+```  private void setup() {
           mColor = DEFAULT_COLOR;
           mWidth = mHeight = DEFAULT_SIZE;
           mInsetValue = DEFAULT_INSET;
@@ -107,4 +108,4 @@ cs表示每圈开始绘制的角度
           canvas.drawArc(rectf, mStartAngle, mEndAngle, false, mPaint);
           canvas.restoreToCount(canvasCopy);//恢复画布
       }
-`
+```
